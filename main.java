@@ -112,7 +112,18 @@ public class main{
     }
 
     public static void deposit(boolean temp, Bank account){
-        
+        System.out.println("How much would you like to deposit? (enter an integer number)");
+        int amt = sc.nextInt();
+        sc.nextLine(); // consume next line
+        int result = 0;
+
+         if(temp){
+            result = account.deposit(temp, amt);
+        }
+        else{
+            result = account.deposit(!temp, amt);
+        }
+
+        System.out.println("Success! You have this much left: $" + result);
     }
 }
-
