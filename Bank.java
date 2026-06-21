@@ -60,6 +60,17 @@ public class Bank{
         }
     }
 
+    public int deposit(boolean fromSavings, int amt){
+        if(fromSavings){
+            savingsBal += amt;
+            return savingsBal;
+        }
+        else{
+            checkingBal += amt;
+            return checkingBal;
+        }
+    }
+
     public String getPass(){
         return this.password;
     }
